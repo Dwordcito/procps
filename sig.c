@@ -231,7 +231,7 @@ void unix_print_signals(void){
 }
 
 /* sanity check */
-static int init_signal_list(void) __attribute__((constructor));
+static int init_signal_list(void) __attribute__((constructor(101)));
 static int init_signal_list(void){
   if(number_of_signals != 31){
     fprintf(stderr, "WARNING: %d signals -- adjust and recompile.\n", number_of_signals);

@@ -209,7 +209,7 @@ static int check_for_privs(void){
   return !!rc;
 }
 
-static void init_libproc(void) __attribute__((constructor));
+static void init_libproc(void) __attribute__((constructor(103)));
 static void init_libproc(void){
   have_privs = check_for_privs();
   // ought to count CPUs in /proc/stat instead of relying
